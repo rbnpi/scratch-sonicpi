@@ -2,10 +2,9 @@ This project uses a python script to act as an OSC server and client to enable m
 
 Sonic PI 3.2.2 is required on the PI as the Sonic PI 3.1 supplied with Raspbian is not a full version and doesn;t support OSC mrssaging. You can download a binary deb for Sonic PI 3.2.2 on Raspbian from http://r.newman.ch/rpi/sonic-pi-3.2.2
 
-An article on teh project is available at https://rbnrpi/wordpress.com
+An article on the project is available at https://rbnrpi.wordpress.com/controlling-sonic-pi-from-scratch-3-on-a-raspberry-pi4/
 
-A video of the project in action is available.
-
+A video of the project in action is available at https://youtu.be/sIDeQ9Hq74M
 Three files compise the project
 SonicPiAndScratch.sb3.zip which is the scratch3 file. GThis should be downlaoded and unzipped on the Pi.
 scratchclickbuttons.rb which is a Sonic Pi file that should be downlaoded and opened in a Sonic PI buffer.
