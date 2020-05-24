@@ -6,6 +6,6 @@ An article on the project is available at https://rbnrpi.wordpress.com/controlli
 
 A video of the project in action is available at https://youtu.be/sIDeQ9Hq74M
 Three files compise the project
-SonicPiAndScratch.sb3.zip which is the scratch3 file. GThis should be downlaoded and unzipped on the Pi.
+SonicPiAndScratch.sb3 which is the scratch3 file.
 scratchclickbuttons.rb which is a Sonic Pi file that should be downlaoded and opened in a Sonic PI buffer.
 osc-ScratchandSP.py which is an executable script which runs on the Pi hosting Scratch3.
