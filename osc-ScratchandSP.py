@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-#SPoschandler.py written by Robin Newman, May 2020 
+#SPoschandler.py written by Robin Newman, May 2020
+#updated April 2024 to allow for a bug correction in gpiozero
+#when this was writtem gpiozero did not respond to buttonboard.when_released events properly
+#instead a button_pressed event was generated when a button was released
+# the pr function used flags to accommodate this.
+# the simplest fix now that it works properly in current gpiozero is to add the line
+
 #Provides the "glue" to enable the GPIO on Raspberry Pi
 #to communicate with Sonic Pi. Sonic Pi can control LEDs etc,and receive
 #input from devices like push buttons connected to GPIO pins
@@ -40,9 +46,10 @@ def pr():
       flag=False #looking for switch off
       print(current,b.value[current])
       sender.send_message('/playOff',current)
-    
-b.when_pressed = pr #trigger change of state event handled by function pr
 
+#both the next two lines trigger the pr function. Which is responsible is dealt with in the function logic
+b.when_pressed = pr #trigger change of state event handled by function pr
+b.when_released = pr #trigger change of state event handled by function pr
 def doReset(): #deals with reset button pushed (pin 27)
     global activate 
     print("reset",reset.value)
